@@ -1,0 +1,34 @@
+<p>Welcome to the new and improved Slirb.net. This site is now an Angular app and will become the home of many great things to come!</p>
+<kendo-tilelayout
+    [columns]="4"
+    [resizable]="true"
+    [reorderable]="true">
+
+    <kendo-tilelayout-item title="About" [col]="1" [colSpan]="1">
+        <kendo-tilelayout-item-body>
+            <p>Be a little blog-ish place where I can put personal life stuff. Hobbies, goals, relationship/pet status, etc.</p>
+        </kendo-tilelayout-item-body>
+    </kendo-tilelayout-item>
+
+    <kendo-tilelayout-item title="Experience" [col]="2" [colSpan]="1">
+        <kendo-tilelayout-item-body>
+            <p (click)="onCardClick('experience')">Be a living resume of my skillset and things I've implemented at work. Technologies and stacks used, software skills, etc.</p>
+        </kendo-tilelayout-item-body>
+    </kendo-tilelayout-item>
+
+    <kendo-tilelayout-item title="Projects" [col]="3" [colSpan]="1">
+        <kendo-tilelayout-item-body>
+            <p (click)="onCardClick('projects')">Show off some of my old/current projects. Direct links to github, pictures, etc</p>
+        </kendo-tilelayout-item-body>
+    </kendo-tilelayout-item>
+
+    <kendo-tilelayout-item title="Travel" [col]="4" [colSpan]="1">
+        <kendo-tilelayout-item-body>
+            <p (click)="onCardClick('travel')">Will take users to a page that shows off some of my travels and the pictures I've taken on them. Pictures hosted on the web and add a maintenance page that allows an authorized user to upload new pictures.</p>
+        </kendo-tilelayout-item-body>
+    </kendo-tilelayout-item>
+</kendo-tilelayout>
+
+<div>
+    <img id="landingImage" class="img-responsive" src=imageSource style="width: 100%; height:100%">
+</div>

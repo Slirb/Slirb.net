@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { faBars, faHeart} from '@fortawesome/free-solid-svg-icons';
+import { ApiService } from './services/api.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'slirb.net';
+
+  public today:Date = new Date();
+
+  public faBars = faBars;
+
+  public faHeart = faHeart;
+
+  constructor(private apiService:ApiService){
+
+  }
 }
