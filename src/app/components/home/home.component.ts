@@ -2,6 +2,7 @@ import { Component} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PictureResponseModel } from 'src/app/models/picture-response';
 import { ApiService } from 'src/app/services/api.service';
+import { Orientation } from "@progress/kendo-angular-layout";
 
 @Component({
   selector: 'app-home',
@@ -12,6 +13,8 @@ import { ApiService } from 'src/app/services/api.service';
 export class HomeComponent{
 
   public imageSource:string = "";
+
+  public orientation:Orientation = "vertical";
   
   constructor(private apiService:ApiService,  private route: ActivatedRoute,  private router: Router){  
 
@@ -30,12 +33,5 @@ export class HomeComponent{
                 console.log(err);
               });
 
-  }
-
-
-  onCardClick(route:string)
-  {
-    console.log("Vtest");
-    this.router.navigate(['/'+ route]);
   }
 }

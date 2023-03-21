@@ -1,208 +1,172 @@
 <p>Here you will find some pictures from some of my travels across the country. Photos are on a {{pictureDelay}}ish second rotation. May be a blurry one here and there, I'm not a photographer!</p>
 
-<kendo-tilelayout
-    [columns]="1">
-
-    <kendo-tilelayout-item title="Cedar Point" [col]="1" [colSpan]="1">
-        <kendo-tilelayout-item-body>
-            <div>
-
-            </div>
-            <kendo-scrollview
-                #CedarPoint
-                [data]="pictureData.get('CedarPoint') ?? []"
-                [width]="scollViewWidth"
-                [height]="scollViewHeight"
-                [arrows]="true"
-                [endless]="true"
-                >
-                <ng-template let-item="item">
-                    <img
-                    src="{{item}}"
-                    [ngStyle]="{ width:'100%'}"
-                    draggable="false"
-                    />
-                </ng-template>
+<kendo-stacklayout [gap]="15" [orientation]="orientation">
+    <kendo-card width="auto">
+        <kendo-card-header class="k-hstack">
+        <div>
+            <h1 kendoCardTitle>Cedar Point</h1>
+        </div>
+        </kendo-card-header>
+        <kendo-scrollview
+                    #CedarPoint
+                    [data]="pictureData.get('CedarPoint') ?? []"
+                    [width]="scollViewWidth"
+                    [height]="scollViewHeight"
+                    [arrows]="true"
+                    [endless]="true"
+                    >
+                    <ng-template let-item="item">
+                        <img
+                        src="{{item}}"
+                        [ngStyle]="{ width:'100%'}"
+                        draggable="false"
+                        />
+                    </ng-template>
                 </kendo-scrollview>
-                <!--
-                <button kendoButton (click)="paused = !paused">
-                {{ paused ? "Resume" : "Pause" }}
-                </button>
-                -->
-        </kendo-tilelayout-item-body>
-    </kendo-tilelayout-item>
+    </kendo-card>
 
-    <kendo-tilelayout-item title="King's Island" [col]="1" [colSpan]="1">
-        <kendo-tilelayout-item-body>
-            <div>
-
-            </div>
-            <kendo-scrollview
-                #KingsIsland
-                [data]="pictureData.get('KingsIsland') ?? []"
-                [width]="scollViewWidth"
-                [height]="scollViewHeight"
-                [arrows]="true"
-                [endless]="true"
-                >
-                <ng-template let-item="item">
-                    <img
-                    src="{{item}}"
-                    [ngStyle]="{ width:'100%'}"
-                    draggable="false"
-                    />
-                </ng-template>
+    <kendo-card width="auto">
+        <kendo-card-header class="k-hstack">
+        <div>
+            <h1 kendoCardTitle>King's Island</h1>
+        </div>
+        </kendo-card-header>
+        <kendo-scrollview
+                    #KingsIsland
+                    [data]="pictureData.get('KingsIsland') ?? []"
+                    [width]="scollViewWidth"
+                    [height]="scollViewHeight"
+                    [arrows]="true"
+                    [endless]="true"
+                    >
+                    <ng-template let-item="item">
+                        <img
+                        src="{{item}}"
+                        [ngStyle]="{ width:'100%'}"
+                        draggable="false"
+                        />
+                    </ng-template>
                 </kendo-scrollview>
-                <!--
-                <button kendoButton (click)="paused = !paused">
-                {{ paused ? "Resume" : "Pause" }}
-                </button>
-                -->
-        </kendo-tilelayout-item-body>
-    </kendo-tilelayout-item>
+    </kendo-card>
 
-    <kendo-tilelayout-item title="Washington" [col]="1" [colSpan]="1">
-        <kendo-tilelayout-item-body>
-            <div>
-
-            </div>
-            <kendo-scrollview
-                #Washington
-                [data]="pictureData.get('Washington') ?? []"
-                [width]="scollViewWidth"
-                [height]="scollViewHeight"
-                [arrows]="true"
-                [endless]="true"
-                >
-                <ng-template let-item="item">
-                    <img
-                    src="{{item}}"
-                    [ngStyle]="{ width:'100%'}"
-                    draggable="false"
-                    />
-                </ng-template>
+    <kendo-card width="auto">
+        <kendo-card-header class="k-hstack">
+        <div>
+            <h1 kendoCardTitle>Washington</h1>
+        </div>
+        </kendo-card-header>
+        <kendo-scrollview
+                    #Washington
+                    [data]="pictureData.get('Washington') ?? []"
+                    [width]="scollViewWidth"
+                    [height]="scollViewHeight"
+                    [arrows]="true"
+                    [endless]="true"
+                    >
+                    <ng-template let-item="item">
+                        <img
+                        src="{{item}}"
+                        [ngStyle]="{ width:'100%'}"
+                        draggable="false"
+                        />
+                    </ng-template>
                 </kendo-scrollview>
-                <!--
-                <button kendoButton (click)="paused = !paused">
-                {{ paused ? "Resume" : "Pause" }}
-                </button>
-                -->
-        </kendo-tilelayout-item-body>
-    </kendo-tilelayout-item>
+    </kendo-card>
 
-    <kendo-tilelayout-item title="Dollywood" [col]="1" [colSpan]="1">
-        <kendo-tilelayout-item-body>
-            <div>
-
-            </div>
-            <kendo-scrollview
-                #Dollywood
-                [data]="pictureData.get('Dollywood') ?? []"
-                [width]="scollViewWidth"
-                [height]="scollViewHeight"
-                [arrows]="true"
-                [endless]="true"
-                >
-                <ng-template let-item="item">
-                    <img
-                    src="{{item}}"
-                    [ngStyle]="{ width:'100%'}"
-                    draggable="false"
-                    />
-                </ng-template>
+    <kendo-card width="auto">
+        <kendo-card-header class="k-hstack">
+        <div>
+            <h1 kendoCardTitle>Dollywood</h1>
+        </div>
+        </kendo-card-header>
+        <kendo-scrollview
+                    #Dollywood
+                    [data]="pictureData.get('Dollywood') ?? []"
+                    [width]="scollViewWidth"
+                    [height]="scollViewHeight"
+                    [arrows]="true"
+                    [endless]="true"
+                    >
+                    <ng-template let-item="item">
+                        <img
+                        src="{{item}}"
+                        [ngStyle]="{ width:'100%'}"
+                        draggable="false"
+                        />
+                    </ng-template>
                 </kendo-scrollview>
-                <!--
-                <button kendoButton (click)="paused = !paused">
-                {{ paused ? "Resume" : "Pause" }}
-                </button>
-                -->
-        </kendo-tilelayout-item-body>
-    </kendo-tilelayout-item>
+    </kendo-card>
 
-    <kendo-tilelayout-item title="Branson" [col]="1" [colSpan]="1">
-        <kendo-tilelayout-item-body>
-            <div>
-
-            </div>
-            <kendo-scrollview
-                #Branson
-                [data]="pictureData.get('Branson') ?? []"
-                [width]="scollViewWidth"
-                [height]="scollViewHeight"
-                [arrows]="true"
-                [endless]="true"
-                >
-                <ng-template let-item="item">
-                    <img
-                    src="{{item}}"
-                    [ngStyle]="{ width:'100%'}"
-                    draggable="false"
-                    />
-                </ng-template>
+    <kendo-card width="auto">
+        <kendo-card-header class="k-hstack">
+        <div>
+            <h1 kendoCardTitle>Branson</h1>
+        </div>
+        </kendo-card-header>
+        <kendo-scrollview
+                    #Branson
+                    [data]="pictureData.get('Branson') ?? []"
+                    [width]="scollViewWidth"
+                    [height]="scollViewHeight"
+                    [arrows]="true"
+                    [endless]="true"
+                    >
+                    <ng-template let-item="item">
+                        <img
+                        src="{{item}}"
+                        [ngStyle]="{ width:'100%'}"
+                        draggable="false"
+                        />
+                    </ng-template>
                 </kendo-scrollview>
-                <!--
-                <button kendoButton (click)="paused = !paused">
-                {{ paused ? "Resume" : "Pause" }}
-                </button>
-                -->
-        </kendo-tilelayout-item-body>
-    </kendo-tilelayout-item>
+    </kendo-card>
 
-    <kendo-tilelayout-item title="Chicago" [col]="1" [colSpan]="1">
-        <kendo-tilelayout-item-body>
-            <div>
-
-            </div>
-            <kendo-scrollview
-                #Chicago
-                [data]="pictureData.get('Chicago') ?? []"
-                [width]="scollViewWidth"
-                [height]="scollViewHeight"
-                [arrows]="true"
-                [endless]="true"
-                >
-                <ng-template let-item="item">
-                    <img
-                    src="{{item}}"
-                    [ngStyle]="{ width:'100%'}"
-                    draggable="false"
-                    />
-                </ng-template>
+    <kendo-card width="auto">
+        <kendo-card-header class="k-hstack">
+        <div>
+            <h1 kendoCardTitle>Chicago</h1>
+        </div>
+        </kendo-card-header>
+        <kendo-scrollview
+                    #Chicago
+                    [data]="pictureData.get('Chicago') ?? []"
+                    [width]="scollViewWidth"
+                    [height]="scollViewHeight"
+                    [arrows]="true"
+                    [endless]="true"
+                    >
+                    <ng-template let-item="item">
+                        <img
+                        src="{{item}}"
+                        [ngStyle]="{ width:'100%'}"
+                        draggable="false"
+                        />
+                    </ng-template>
                 </kendo-scrollview>
-                <!--
-                <button kendoButton (click)="paused = !paused">
-                {{ paused ? "Resume" : "Pause" }}
-                </button>
-                -->
-        </kendo-tilelayout-item-body>
-    </kendo-tilelayout-item>
+    </kendo-card>
 
-    <kendo-tilelayout-item title="Michigan" [col]="1" [colSpan]="1">
-        <kendo-tilelayout-item-body>
-            <div>
-
-            </div>
-            <kendo-scrollview
-                #Michigan
-                [data]="pictureData.get('Michigan') ?? []"
-                [width]="scollViewWidth"
-                [height]="scollViewHeight"
-                [arrows]="true"
-                [endless]="true"
-                >
-                <ng-template let-item="item">
-                    <img
-                    src="{{item}}"
-                    [ngStyle]="{ width:'100%'}"
-                    draggable="false"
-                    />
-                </ng-template>
+    <kendo-card width="auto">
+        <kendo-card-header class="k-hstack">
+        <div>
+            <h1 kendoCardTitle>Michigan</h1>
+        </div>
+        </kendo-card-header>
+        <kendo-scrollview
+                    #Michigan
+                    [data]="pictureData.get('Michigan') ?? []"
+                    [width]="scollViewWidth"
+                    [height]="scollViewHeight"
+                    [arrows]="true"
+                    [endless]="true"
+                    >
+                    <ng-template let-item="item">
+                        <img
+                        src="{{item}}"
+                        [ngStyle]="{ width:'100%'}"
+                        draggable="false"
+                        />
+                    </ng-template>
                 </kendo-scrollview>
-                <!--
-                <button kendoButton (click)="paused = !paused">
-                {{ paused ? "Resume" : "Pause" }}
-                </button>
-                -->
-        </kendo-tilelayout-item-body>
-    </kendo-tilelayout-item>
-</kendo-tilelayout>
+    </kendo-card>
+
+</kendo-stacklayout>

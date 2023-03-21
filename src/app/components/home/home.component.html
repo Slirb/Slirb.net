@@ -1,34 +1,73 @@
 <p>Welcome to the new and improved Slirb.net. This site is now an Angular app and will become the home of many great things to come!</p>
-<kendo-tilelayout
-    [columns]="4"
-    [resizable]="true"
-    [reorderable]="true">
 
-    <kendo-tilelayout-item title="About" [col]="1" [colSpan]="1">
-        <kendo-tilelayout-item-body>
+<kendo-stacklayout [gap]="15" [orientation]="orientation">
+    <kendo-card width="auto">
+        <kendo-card-header class="k-hstack">
+            <div>
+                <h1 kendoCardTitle>About</h1>
+            </div>
+        </kendo-card-header>
+        <kendo-card-body>
             <p>Be a little blog-ish place where I can put personal life stuff. Hobbies, goals, relationship/pet status, etc.</p>
-        </kendo-tilelayout-item-body>
-    </kendo-tilelayout-item>
+        </kendo-card-body>
+        <kendo-card-actions layout="center">
+            <button kendoButton fillMode="flat" themeColor="primary">
+                See About
+            </button>
+        </kendo-card-actions>
+    </kendo-card>
 
-    <kendo-tilelayout-item title="Experience" [col]="2" [colSpan]="1">
-        <kendo-tilelayout-item-body>
-            <p (click)="onCardClick('experience')">Be a living resume of my skillset and things I've implemented at work. Technologies and stacks used, software skills, etc.</p>
-        </kendo-tilelayout-item-body>
-    </kendo-tilelayout-item>
+    <kendo-card width="auto">
+        <kendo-card-header class="k-hstack">
+            <div>
+                <h1 kendoCardTitle>Experience</h1>
+            </div>
+        </kendo-card-header>
+        <kendo-card-body>
+            <p>Be a living resume of my skillset and things I've implemented at work. Technologies and stacks used, software skills, etc.</p>
+        </kendo-card-body>
+        <kendo-card-actions layout="center">
+            <button kendoButton fillMode="flat" themeColor="primary" routerLink="/experience" routerLinkActive="active" ariaCurrentWhenActive="page">
+                See Experience
+            </button>
+        </kendo-card-actions>
+    </kendo-card>
 
-    <kendo-tilelayout-item title="Projects" [col]="3" [colSpan]="1">
-        <kendo-tilelayout-item-body>
-            <p (click)="onCardClick('projects')">Show off some of my old/current projects. Direct links to github, pictures, etc</p>
-        </kendo-tilelayout-item-body>
-    </kendo-tilelayout-item>
+    <kendo-card width="auto">
+        <kendo-card-header class="k-hstack">
+        <div>
+            <h1 kendoCardTitle>Projects</h1>
+        </div>
+        </kendo-card-header>
+        <kendo-card-body>
+            <p>Show off some of my old/current projects. Direct links to github, pictures, etc</p>
+        </kendo-card-body>
+        <kendo-card-actions layout="center">
+            <button kendoButton fillMode="flat" themeColor="primary" routerLink="/projects" routerLinkActive="active" ariaCurrentWhenActive="page">
+                See Projects
+            </button>
+        </kendo-card-actions>
+    </kendo-card>
 
-    <kendo-tilelayout-item title="Travel" [col]="4" [colSpan]="1">
-        <kendo-tilelayout-item-body>
-            <p (click)="onCardClick('travel')">Will take users to a page that shows off some of my travels and the pictures I've taken on them. Pictures hosted on the web and add a maintenance page that allows an authorized user to upload new pictures.</p>
-        </kendo-tilelayout-item-body>
-    </kendo-tilelayout-item>
-</kendo-tilelayout>
+    <kendo-card width="auto">
+        <kendo-card-header class="k-hstack">
+        <div>
+            <h1 kendoCardTitle>Travel</h1>
+        </div>
+        </kendo-card-header>
+        <kendo-card-body>
+            <p>I love to travel to see new things, gaze at vistas, visit amusement parks, and just take in the sights and sounds of different parts of the US. Here you can find images from some of my adventures so far.</p>
+        </kendo-card-body>
+        <kendo-card-actions layout="center">
+            <button kendoButton fillMode="flat" themeColor="primary" routerLink="/travel" routerLinkActive="active" ariaCurrentWhenActive="page">
+                See Travel
+            </button>
+        </kendo-card-actions>
+    </kendo-card>
+</kendo-stacklayout>
 
+
+<p>Bonus car picutre. Not mine, although I do own one in this exact color. </p>
 <div>
     <img id="landingImage" class="img-responsive" src=imageSource style="width: 100%; height:100%">
 </div>
