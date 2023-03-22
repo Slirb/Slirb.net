@@ -1,12 +1,120 @@
-<p>Current:
-    This WebSite
-</p>
 
-<p>Legacy:
-    Python Reddit Fun
-    Auto Maintenance Tracker
-    Date Nite App
-    Random Cat Picture Application
-    Bus Management Website
-    Hospital Patient Management System
-</p>
+<h1>Current Projects</h1>
+<kendo-stacklayout [gap]="15" [orientation]="orientation">
+    <kendo-card width="auto">
+        <kendo-card-header class="k-hstack">
+            <div>
+                <h1 kendoCardTitle>This WebSite</h1>
+            </div>
+        </kendo-card-header>
+        <kendo-card-body>
+            <p>This website is an Angular application using Kendo components. Some content is stored in a PostgreSQL DB that is accessed through a .NET Core API hosted on Azure.</p>
+        </kendo-card-body>
+        <kendo-card-actions layout="center">
+            <button kendoButton fillMode="flat" themeColor="primary" (click)="goToLink('https://github.com/Slirb/Slirb.net')">
+                Visit Github
+            </button>
+        </kendo-card-actions>
+    </kendo-card>
+</kendo-stacklayout>
+
+<h1>Legacy Projects</h1>
+<kendo-stacklayout [gap]="15" [orientation]="orientation">
+    <kendo-card width="auto">
+        <kendo-card-header class="k-hstack">
+            <div>
+                <h1 kendoCardTitle>Python Playground</h1>
+            </div>
+        </kendo-card-header>
+        <kendo-card-body>
+            <p>Created for some self-education in Python. Interacts with the Reddit API using PRAW and stores the retrieved information in a PostgreSQL DB. Also then took the stored information and manipulated the content before storing it in a new table. </p>
+        </kendo-card-body>
+        <kendo-card-actions layout="center">
+            <button kendoButton fillMode="flat" themeColor="primary" (click)="goToLink('https://github.com/Slirb/PythonPlayground')">
+                Visit Github
+            </button>
+        </kendo-card-actions>
+    </kendo-card>
+
+    <kendo-card width="auto">
+        <kendo-card-header class="k-hstack">
+            <div>
+                <h1 kendoCardTitle>Auto Maintenance Tracker</h1>
+            </div>
+        </kendo-card-header>
+        <kendo-card-body>
+            <p>Android app build using Android Studio. Used to track maintenance items for 1 or more automobiles. Uses a SQLite DB to store information about the automobile, and has Google maps integration to find and navigate to nearby dealerships or auto parts stores.</p>
+        </kendo-card-body>
+        <kendo-card-actions layout="center">
+            <button kendoButton fillMode="flat" themeColor="primary"  (click)="goToLink('https://github.com/Slirb/AutoMaintenanceTracker')">
+                Visit Github
+            </button>
+        </kendo-card-actions>
+    </kendo-card>
+
+    <kendo-card width="auto">
+        <kendo-card-header class="k-hstack">
+            <div>
+                <h1 kendoCardTitle>Date Night App</h1>
+            </div>
+        </kendo-card-header>
+        <kendo-card-body>
+            <p>App made to track new places to eat. Can import from Google search results or Maps. Supports random selection of a favorite place, or a brand new place. Allows for navigation to the location, or calling the location. Stores the information in a SQLite DB.</p>
+        </kendo-card-body>
+        <kendo-card-actions layout="center">
+            <button kendoButton fillMode="flat" themeColor="primary" (click)="goToLink('https://github.com/Slirb/DateNight')">
+                Visit Github
+            </button>
+        </kendo-card-actions>
+    </kendo-card>
+
+    <kendo-card width="auto">
+        <kendo-card-header class="k-hstack">
+            <div>
+                <h1 kendoCardTitle>CatPix</h1>
+            </div>
+        </kendo-card-header>
+        <kendo-card-body>
+            <p>Made for a friend. Will send a random cat picture hosted on the internet as a text message when the app is opened and ran. Parsed over a 1000 image URLS from Google and stored them in a SQLite DB.</p>
+        </kendo-card-body>
+        <kendo-card-actions layout="center">
+            <button kendoButton fillMode="flat" themeColor="primary"  (click)="goToLink('https://github.com/Slirb/CatPix')">
+                Visit Github
+            </button>
+        </kendo-card-actions>
+    </kendo-card>        
+</kendo-stacklayout>
+
+<kendo-stacklayout [gap]="15" [orientation]="orientation">
+    <kendo-card width="auto">
+        <kendo-card-header class="k-hstack">
+            <div>
+                <h1 kendoCardTitle>Bus Management Website</h1>
+            </div>
+        </kendo-card-header>
+        <kendo-card-body>
+            <p>Senior project during college. Created an internal website for an entertainment company. Allows for tracking of chartered bus trips, and all of the attending indivudauls and their personal information. Written in Visual Basic, and utilizing MVC 5. Stored data in a  Microsoft SQL Server database, and designed using Bootstrap.</p>
+        </kendo-card-body>
+        <kendo-card-actions layout="center">
+            <button kendoButton fillMode="flat" themeColor="primary"  (click)="goToLink('https://github.com/Slirb/CMS')">
+                Visit Github
+            </button>
+        </kendo-card-actions>
+    </kendo-card>
+
+    <kendo-card width="auto">
+        <kendo-card-header class="k-hstack">
+            <div>
+                <h1 kendoCardTitle>Hospital Patient Management System</h1>
+            </div>
+        </kendo-card-header>
+        <kendo-card-body>
+            <p>School project to replicate a hospital patient management system. Allowed for creating new patients, recording and viewing vitals, tracking visits to the hospital, and tracking medication history. Information was stored in a Microsoft SQL Server database.</p>
+        </kendo-card-body>
+        <kendo-card-actions layout="center">
+            <button kendoButton fillMode="flat" themeColor="primary"  (click)="goToLink('https://github.com/Slirb/PatientManagement')">
+                Visit Github
+            </button>
+        </kendo-card-actions>
+    </kendo-card>
+</kendo-stacklayout>
