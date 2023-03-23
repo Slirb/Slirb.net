@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Orientation } from '@progress/kendo-angular-layout';
+import { MobileHelper } from 'src/app/helpers/mobile.helper';
 
 @Component({
   selector: 'app-experience-landing',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class ExperienceLandingComponent {
 
+  public orientation:Orientation = "vertical";
 }
