@@ -1,6 +1,7 @@
 import { AfterViewInit, Component,  ViewChild } from '@angular/core';
 import { Orientation } from "@progress/kendo-angular-layout";
 import { MobileHelper } from 'src/app/helpers/mobile.helper';
+import { faUpRightFromSquare} from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -24,6 +25,8 @@ export class TravelLandingComponent implements AfterViewInit {
       ['Washington', 55],
     ]
   );
+
+  public faUpRightFromSquare = faUpRightFromSquare;
 
   public pictureDelay:number = 10;
 
@@ -403,5 +406,36 @@ export class TravelLandingComponent implements AfterViewInit {
 
     }
 
+  }
+
+  openImage(location:string)
+  {
+    let viewSource:any;
+    switch(location)
+          {
+            case "Branson":
+              viewSource = this.bransonView;
+              break;
+            case "CedarPoint":
+              viewSource = this.cedarPointView;
+              break;
+            case "Chicago":
+              viewSource = this.chicagoView;
+              break;
+            case "Dollywood":
+              viewSource = this.dollywoodView;
+              break;
+            case "KingsIsland":
+              viewSource = this.kingsIslandView;
+              break;
+            case "Michigan":
+              viewSource = this.michiganView;
+              break;
+            case "Washington":
+              viewSource = this.washingtonView;
+              break;
+          }
+
+      window.open(viewSource.data[viewSource.activeIndex], "_blank");
   }
 }
