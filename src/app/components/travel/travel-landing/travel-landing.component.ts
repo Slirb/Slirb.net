@@ -181,6 +181,66 @@ export class TravelLandingComponent implements AfterViewInit {
     ]
   );
 
+  private WashingtonMap:Map<string, string> =  new Map<string, string>(
+    [
+      ['1', "d1cf2ecb-d6a7-4d2e-c3ac-a5c6585ba900"],
+      ['2', "d7c62eb7-5310-403a-31b9-e33a05a23d00"],
+      ['3', "4213e695-4e0a-4025-5366-2dbe0efef800"],
+      ['4', "e830b3c1-754d-43f6-7ae3-5439452e2c00"],
+      ['5', "e2333ff2-93da-4d8e-9ec9-8754f9ef2000"],
+      ['6', "02e9831c-e640-4c5f-ee99-b713009d1a00"],
+      ['7', "177ab8be-d6eb-4d29-eb82-82cf7d4d0c00"],
+      ['8', "52495ac3-7e03-4d30-c1d9-de596cf90700"],
+      ['9', "8d3594e4-217a-4e33-df43-a4b4d8b9b500"],
+      ['10', "ccf51b7c-8516-4f68-879f-9fae096a5f00"],
+      ['11', "5edc943d-7c4d-433d-f917-fd69323a5900"],
+      ['12', "8cc615f2-c61c-4435-22a3-ba9a37e2f400"],
+      ['13', "75097316-8e59-42f4-aa04-65cd592bda00"],
+      ['14', "db9c1706-3f7a-42cf-b975-3aee7bb3e500"],
+      ['15', "9533dc2b-7a10-4d7a-0056-c40448523500"],
+      ['16', "418e678b-593d-47bd-9a23-ba1af9e57900"],
+      ['17', "1d7d3afa-cd53-4f9f-2532-bb1cfce9df00"],
+      ['18', "89953392-05e9-4798-166e-c92f09610f00"],
+      ['19', "9939bcac-f539-4c5b-53d6-7c8cfffc6500"],
+      ['20', "5517e96d-b589-41e1-7acf-bfee95db6600"],
+      ['21', "4fe643b5-28d6-4aca-365e-c123f23f0a00"],
+      ['22', "3bebdcf9-2d93-4ed1-111c-9c3924884900"],
+      ['23', "d7f705b0-d0eb-4780-57a8-e959f39b9800"],
+      ['24', "8afd3bf6-3267-45c8-1746-c0fcae1dc000"],
+      ['25', "afce1af0-0f18-496a-35b7-f708d4359000"],
+      ['26', "7ac73ea1-64b1-4650-16ea-9c6cdbec1200"],
+      ['27', "c4f2bbad-83ca-4535-d273-282b5b6f3500"],
+      ['28', "7192bf3e-2ab2-43ec-98bc-6b8f2cb54400"],
+      ['29', "fd2a4fef-b455-4600-2c42-5bd6c0cc2100"],
+      ['30', "9be45494-8247-4454-f03e-a627791ac500"],
+      ['31', "72a229cb-7a2e-420d-b5b2-e0755b358700"],
+      ['32', "3f4b394f-a9ab-4b16-fc9c-464906866100"],
+      ['33', "b3e985a7-54cd-4701-0692-3e2ce5915800"],
+      ['34', "d97c5f74-8085-433c-a897-42e99de8a500"],
+      ['35', "042c41aa-beaf-4d2e-1cf7-f999d82a8200"],
+      ['36', "8e388f8d-3415-40aa-55b8-3980e9855100"],
+      ['37', "895a1f20-d7a9-4b58-7029-e65413b16d00"],
+      ['38', "db535c41-980a-415a-0b52-06e53b06bb00"],
+      ['39', "214c1e42-73c8-4763-4149-d66f862f4400"],
+      ['40', "787e0e2a-9520-45ef-9eda-70f87a7a8400"],
+      ['41', "5d2575f2-c020-49d2-f17a-47a7c8be1100"],
+      ['42', "4d8872af-609e-47fd-40ce-014284c74900"],
+      ['43', "d1de52eb-cefb-4beb-fe4d-b4887ca26300"],
+      ['44', "d9659200-9f6a-4d29-3589-ee550225f800"],
+      ['45', "a7a557c5-e42f-4a2d-8fe3-0a9537e10800"],
+      ['46', "7181e249-d7aa-4c59-43bc-3b9ba999cb00"],
+      ['47', "cdfba218-7148-44b1-b0a7-4525c76d2d00"],
+      ['48', "16b7a7e6-ca97-43cd-0261-d58200cd2200"],
+      ['49', "bba0795c-78ad-447b-ef9f-00aeb8e40600"],
+      ['50', "30477e53-2e7e-40a4-dc45-aea2f2d74400"],
+      ['51', "f3dbb290-40e3-4670-8684-bd2daefbb200"],
+      ['52', "2a0ca4a5-0707-41ea-80a8-d2ef4fb1ab00"],
+      ['53', "eb7e0c68-b4a4-43aa-692c-0fad81795900"],
+      ['54', "aaf2566b-6d55-46d7-5438-187c9616bf00"],
+      ['55', "d5b0e3d9-d2f4-4f17-b37f-20afccd5c800"],
+    ]
+  );
+
   @ViewChild("Branson") private bransonView: any;
 
   @ViewChild("CedarPoint") private cedarPointView: any;
@@ -194,6 +254,20 @@ export class TravelLandingComponent implements AfterViewInit {
   @ViewChild("Michigan") private michiganView: any;
 
   @ViewChild("Washington") private washingtonView: any;
+
+  public cedarPause = false;
+
+  public kingsPause = false;
+
+  public bransonPause = false;
+
+  public chicagoPause = false;
+
+  public michiganPause = false;
+
+  public dollywoodPause = false;
+
+  public washingtonPause = false;
 
   public constructor()
   {  
@@ -223,25 +297,32 @@ export class TravelLandingComponent implements AfterViewInit {
         switch(key)
         {
           case "Branson":
-            this.bransonView.next();
+            if(!this.bransonPause)
+              this.bransonView.next();
             break;
           case "CedarPoint":
-            this.cedarPointView.next();
+            if(!this.cedarPause)
+              this.cedarPointView.next();
             break;
           case "Chicago":
-            this.chicagoView.next();
+            if(!this.chicagoPause)
+              this.chicagoView.next();
             break;
           case "Dollywood":
-            this.dollywoodView.next();
+            if(!this.dollywoodPause)
+              this.dollywoodView.next();
             break;
           case "KingsIsland":
-            this.kingsIslandView.next();
+            if(!this.kingsPause)
+              this.kingsIslandView.next();
             break;
           case "Michigan":
-            this.michiganView.next();
+            if(!this.michiganPause)
+              this.michiganView.next();
             break;
           case "Washington":
-            this.washingtonView.next();
+            if(!this.washingtonPause)
+              this.washingtonView.next();
             break;
         }        
       }, (this.pictureDelay + spaceInt) * 1000);
@@ -272,37 +353,38 @@ export class TravelLandingComponent implements AfterViewInit {
           // Filenames will always be Location-number
           // Path is always assets/images/Location/
 
-          if(location != 'Washington')
+          
+          let foundmap:any;
+          switch(location)
           {
-            let foundmap:any;
-            switch(location)
-            {
-              case "Branson":
-                foundmap = this.BransonMap;
-                break;
-              case "CedarPoint":
-                foundmap = this.CedarPointMap;
-                break;
-              case "Chicago":
-                foundmap = this.ChicagoMap;
-                break;
-              case "Dollywood":
-                foundmap = this.DollywoodMap;
-                break;
-              case "KingsIsland":
-                foundmap = this.KingsIslandMap;
-                break;
-              case "Michigan":
-                foundmap = this.MichiganMap;
-                break;
-            }
-
-            returnFilePath = 'https://imagedelivery.net/bEEggnuSWUuamo94O06FbQ/' + foundmap.get(randNum.toString()) + '/public';
-
+            case "Branson":
+              foundmap = this.BransonMap;
+              break;
+            case "CedarPoint":
+              foundmap = this.CedarPointMap;
+              break;
+            case "Chicago":
+              foundmap = this.ChicagoMap;
+              break;
+            case "Dollywood":
+              foundmap = this.DollywoodMap;
+              break;
+            case "KingsIsland":
+              foundmap = this.KingsIslandMap;
+              break;
+            case "Michigan":
+              foundmap = this.MichiganMap;
+              break;
+            case "Washington":
+              foundmap = this.WashingtonMap;
+              break;
           }
-          else{
-            returnFilePath = 'assets/images/'+ location + '/' + location + '-' + randNum.toString() + '.jpg';    
-          }          
+
+          returnFilePath = 'https://imagedelivery.net/bEEggnuSWUuamo94O06FbQ/' + foundmap.get(randNum.toString()) + '/public';
+
+          
+          //returnFilePath = 'assets/images/'+ location + '/' + location + '-' + randNum.toString() + '.jpg';    
+          
 
           if(!this.pictureData.get(location)?.includes(returnFilePath)){
 

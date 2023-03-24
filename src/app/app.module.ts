@@ -15,6 +15,9 @@ import { ExperienceLandingComponent } from './components/experience/experience-l
 import { ProjectsLandingComponent } from './components/projects/projects-landing/projects-landing.component';
 import { TravelLandingComponent } from './components/travel/travel-landing/travel-landing.component';
 import { ScrollViewModule } from '@progress/kendo-angular-scrollview';
+import { LabelModule } from '@progress/kendo-angular-label';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+
 
 
 
@@ -41,7 +44,10 @@ import { ScrollViewModule } from '@progress/kendo-angular-scrollview';
     FontAwesomeModule,
     NavigationModule,
     HttpClientModule,
-    ScrollViewModule
+    ScrollViewModule,
+    LabelModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

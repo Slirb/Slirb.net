@@ -3,10 +3,18 @@
 <kendo-stacklayout [gap]="15" [orientation]="orientation">
     <kendo-card width="auto">
         <kendo-card-header class="k-hstack">
-        <div>
-            <h1 kendoCardTitle>Cedar Point</h1>
-        </div>
+            <div style="width:50%">
+                <h1 kendoCardTitle>Cedar Point</h1>
+            </div>
+
+            <div style="width:50%; display:flex; justify-content: flex-end;">
+                <kendo-label text="Pause">
+                    <kendo-switch  [(ngModel)]='cedarPause'>    
+                    </kendo-switch>
+                </kendo-label>
+            </div>
         </kendo-card-header>
+
         <kendo-scrollview
                     #CedarPoint
                     [data]="pictureData.get('CedarPoint') ?? []"
@@ -27,10 +35,18 @@
 
     <kendo-card width="auto">
         <kendo-card-header class="k-hstack">
-        <div>
-            <h1 kendoCardTitle>King's Island</h1>
-        </div>
+            <div style="width:50%">
+                <h1 kendoCardTitle>King's Island</h1>
+            </div>
+
+            <div style="width:50%; display:flex; justify-content: flex-end;">
+                <kendo-label text="Pause">
+                    <kendo-switch  [(ngModel)]='kingsPause'>    
+                    </kendo-switch>
+                </kendo-label>
+            </div>
         </kendo-card-header>
+
         <kendo-scrollview
                     #KingsIsland
                     [data]="pictureData.get('KingsIsland') ?? []"
@@ -51,10 +67,18 @@
 
     <kendo-card width="auto">
         <kendo-card-header class="k-hstack">
-        <div>
-            <h1 kendoCardTitle>Washington</h1>
-        </div>
+            <div style="width:50%">
+                <h1 kendoCardTitle>Washington</h1>
+            </div>
+
+            <div style="width:50%; display:flex; justify-content: flex-end;">
+                <kendo-label text="Pause">
+                    <kendo-switch  [(ngModel)]='washingtonPause'>    
+                    </kendo-switch>
+                </kendo-label>
+            </div>
         </kendo-card-header>
+
         <kendo-scrollview
                     #Washington
                     [data]="pictureData.get('Washington') ?? []"
@@ -75,10 +99,18 @@
 
     <kendo-card width="auto">
         <kendo-card-header class="k-hstack">
-        <div>
-            <h1 kendoCardTitle>Dollywood</h1>
-        </div>
+            <div style="width:50%">
+                <h1 kendoCardTitle>Dollywood</h1>
+            </div>
+
+            <div style="width:50%; display:flex; justify-content: flex-end;">
+                <kendo-label text="Pause">
+                    <kendo-switch  [(ngModel)]='dollywoodPause'>    
+                    </kendo-switch>
+                </kendo-label>
+            </div>
         </kendo-card-header>
+
         <kendo-scrollview
                     #Dollywood
                     [data]="pictureData.get('Dollywood') ?? []"
@@ -99,10 +131,18 @@
 
     <kendo-card width="auto">
         <kendo-card-header class="k-hstack">
-        <div>
-            <h1 kendoCardTitle>Branson</h1>
-        </div>
+            <div style="width:50%">
+                <h1 kendoCardTitle>Branson</h1>
+            </div>
+
+            <div style="width:50%; display:flex; justify-content: flex-end;">
+                <kendo-label text="Pause">
+                    <kendo-switch  [(ngModel)]='bransonPause'>    
+                    </kendo-switch>
+                </kendo-label>
+            </div>
         </kendo-card-header>
+
         <kendo-scrollview
                     #Branson
                     [data]="pictureData.get('Branson') ?? []"
@@ -123,10 +163,18 @@
 
     <kendo-card width="auto">
         <kendo-card-header class="k-hstack">
-        <div>
-            <h1 kendoCardTitle>Chicago</h1>
-        </div>
+            <div style="width:50%">
+                <h1 kendoCardTitle>Chicago</h1>
+            </div>
+
+            <div style="width:50%; display:flex; justify-content: flex-end;">
+                <kendo-label text="Pause">
+                    <kendo-switch  [(ngModel)]='chicagoPause'>    
+                    </kendo-switch>
+                </kendo-label>
+            </div>
         </kendo-card-header>
+
         <kendo-scrollview
                     #Chicago
                     [data]="pictureData.get('Chicago') ?? []"
@@ -147,10 +195,18 @@
 
     <kendo-card width="auto">
         <kendo-card-header class="k-hstack">
-        <div>
-            <h1 kendoCardTitle>Michigan</h1>
-        </div>
+            <div style="width:50%">
+                <h1 kendoCardTitle>Michigan</h1>
+            </div>
+
+            <div style="width:50%; display:flex; justify-content: flex-end;">
+                <kendo-label text="Pause">
+                    <kendo-switch  [(ngModel)]='michiganPause'>    
+                    </kendo-switch>
+                </kendo-label>
+            </div>
         </kendo-card-header>
+
         <kendo-scrollview
                     #Michigan
                     [data]="pictureData.get('Michigan') ?? []"
