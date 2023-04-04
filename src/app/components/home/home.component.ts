@@ -15,12 +15,14 @@ export class HomeComponent{
 
   public imageSource:string = "";
 
+  public pictures:PictureResponseModel[] = [];
+
   public orientation:Orientation = MobileHelper.mobileCheck() ? "vertical" : "horizontal";
   
   constructor(private apiService:ApiService,  private route: ActivatedRoute,  private router: Router){  
 
     this.apiService.get<PictureResponseModel>
-          (`Pictures`).subscribe(resp => {
+          (`Pictures/GetPicture`).subscribe(resp => {
               if (resp?.name !== "") {
                 this.imageSource = resp.url;
                 let targetElement = (<HTMLInputElement>document.getElementById("landingImage"))
@@ -32,7 +34,6 @@ export class HomeComponent{
               },
                 err => {
                 console.log(err);
-              });
-
+              });    
   }
 }

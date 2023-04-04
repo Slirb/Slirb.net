@@ -17,6 +17,7 @@ import { TravelLandingComponent } from './components/travel/travel-landing/trave
 import { ScrollViewModule } from '@progress/kendo-angular-scrollview';
 import { LabelModule } from '@progress/kendo-angular-label';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { LoginComponent } from './components/sestras/login/login.component';
 
 
 
@@ -32,7 +33,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     HomeComponent,
     ExperienceLandingComponent,
     ProjectsLandingComponent,
-    TravelLandingComponent
+    TravelLandingComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

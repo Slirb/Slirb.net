@@ -6,4 +6,6 @@ export class PictureResponseModel{
 
     public url:string = "";
 
+    public destination:number = 0;
+
 }
