@@ -169,14 +169,14 @@ export class TravelLandingComponent implements AfterViewInit {
     let returnFilePaths:string[] = [];
     let returnFilePath:string = "";
 
-    let min:number = 1;
-    let max:number = pictures.length;
+    let min:number = 0;
+    let max:number = pictures.length - 1;
 
 
     let currentLength:number = 0;
     if(max > 0)
     {
-      while(currentLength < max){
+      while(currentLength < max + 1){
         let notFound:boolean = true;
 
         while (notFound) {
@@ -184,7 +184,7 @@ export class TravelLandingComponent implements AfterViewInit {
           // Find a random picture in the number of pictures for the given location
           let randNum:number =  Math.floor(Math.random() * (max - min + 1) + min);           
 
-          returnFilePath = 'https://imagedelivery.net/bEEggnuSWUuamo94O06FbQ/' + pictures.find((picture)=> picture.name === randNum.toString())?.url + '/public';            
+          returnFilePath = 'https://imagedelivery.net/bEEggnuSWUuamo94O06FbQ/' + pictures[randNum].url + '/public';            
 
           if(!returnFilePaths.includes(returnFilePath)){
             
