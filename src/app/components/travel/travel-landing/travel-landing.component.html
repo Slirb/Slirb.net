@@ -22,7 +22,7 @@
         
         <kendo-scrollview
                     #cedarpoint
-                    [data]="pictureData.get('cedarpoint') ?? []"
+                    [data]="pictureData.get('CedarPoint') ?? []"
                     [width]="scollViewWidth"
                     [height]="scollViewHeight"
                     [arrows]="true"
@@ -59,7 +59,7 @@
 
         <kendo-scrollview
                     #kingsisland
-                    [data]="pictureData.get('kingsisland') ?? []"
+                    [data]="pictureData.get('KingsIsland') ?? []"
                     [width]="scollViewWidth"
                     [height]="scollViewHeight"
                     [arrows]="true"
@@ -96,7 +96,7 @@
 
         <kendo-scrollview
                     #washington
-                    [data]="pictureData.get('washington') ?? []"
+                    [data]="pictureData.get('Washington') ?? []"
                     [width]="scollViewWidth"
                     [height]="scollViewHeight"
                     [arrows]="true"
@@ -133,7 +133,7 @@
 
         <kendo-scrollview
                     #dollywood
-                    [data]="pictureData.get('dollywood') ?? []"
+                    [data]="pictureData.get('Dollywood') ?? []"
                     [width]="scollViewWidth"
                     [height]="scollViewHeight"
                     [arrows]="true"
@@ -170,7 +170,7 @@
 
         <kendo-scrollview
                     #branson
-                    [data]="pictureData.get('branson') ?? []"
+                    [data]="pictureData.get('Branson') ?? []"
                     [width]="scollViewWidth"
                     [height]="scollViewHeight"
                     [arrows]="true"
@@ -207,7 +207,7 @@
 
         <kendo-scrollview
                     #chicago
-                    [data]="pictureData.get('chicago') ?? []"
+                    [data]="pictureData.get('Chicago') ?? []"
                     [width]="scollViewWidth"
                     [height]="scollViewHeight"
                     [arrows]="true"
@@ -244,7 +244,44 @@
 
         <kendo-scrollview
                     #michigan
-                    [data]="pictureData.get('michigan') ?? []"
+                    [data]="pictureData.get('Michigan') ?? []"
+                    [width]="scollViewWidth"
+                    [height]="scollViewHeight"
+                    [arrows]="true"
+                    [endless]="true"
+                    >
+                    <ng-template let-item="item">
+                        <img
+                        src="{{item}}"
+                        [ngStyle]="{ width:'100%'}"
+                        draggable="false"
+                        />
+                    </ng-template>
+                </kendo-scrollview>
+    </kendo-card>
+
+    <kendo-card width="auto">
+        <kendo-card-header class="k-hstack">
+            <div style="width:50%">
+                <h1 kendoCardTitle>Mammoth Cave</h1>
+            </div>
+
+            <div style="width:50%; display:flex; justify-content: flex-end;">
+                <kendo-label text="Pause">
+                    <kendo-switch  [(ngModel)]='mammothPause'>    
+                    </kendo-switch>
+                </kendo-label>
+
+                <div style="width:20%"></div>
+                <button class="k-button-clear iconButton" (click)="openImage('mammothcave')" title="Open Image">
+                    <fa-icon [icon]="faUpRightFromSquare"></fa-icon>
+                </button>
+            </div>
+        </kendo-card-header>
+
+        <kendo-scrollview
+                    #mammothcave
+                    [data]="pictureData.get('MammothCave') ?? []"
                     [width]="scollViewWidth"
                     [height]="scollViewHeight"
                     [arrows]="true"

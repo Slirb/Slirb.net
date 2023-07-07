@@ -18,6 +18,8 @@ import { ScrollViewModule } from '@progress/kendo-angular-scrollview';
 import { LabelModule } from '@progress/kendo-angular-label';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { LoginComponent } from './components/sestras/login/login.component';
+import { NotificationModule } from '@progress/kendo-angular-notification';
+
 
 
 
@@ -49,7 +51,8 @@ import { LoginComponent } from './components/sestras/login/login.component';
     ScrollViewModule,
     LabelModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NotificationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

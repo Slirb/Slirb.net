@@ -1,7 +1,21 @@
 
 // Deprecated list of all the picture name:url maps.
 // This information is now stored in the database, but keeping this around for debugging purposes
-export class DepictMaps{
+export class PictureMaps{
+
+    private locations:Array<string> = 
+    [
+        "Branson",
+        "Cedarpoint",
+        "Chicago",
+        "Dollywood",
+        "KingsIsland",
+        "Michigan",
+        "Washington"
+    ]
+    
+    
+
     private BransonMap:Map<string, string> =  new Map<string, string>(
     [
         ['1', "5ec210dd-62a1-4533-0d14-116d0df43b00"],

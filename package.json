@@ -34,6 +34,7 @@
     "@progress/kendo-angular-label": "^11.3.0",
     "@progress/kendo-angular-layout": "^11.3.0",
     "@progress/kendo-angular-navigation": "^11.3.0",
+    "@progress/kendo-angular-notification": "^11.3.0",
     "@progress/kendo-angular-popup": "11.3.0",
     "@progress/kendo-angular-progressbar": "11.3.0",
     "@progress/kendo-angular-scrollview": "^11.3.0",

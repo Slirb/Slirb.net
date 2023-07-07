@@ -21,6 +21,7 @@ export class HomeComponent{
   
   constructor(private apiService:ApiService,  private route: ActivatedRoute,  private router: Router){  
 
+    /*
     this.apiService.get<PictureResponseModel>
           (`Pictures/GetPicture`).subscribe(resp => {
               if (resp?.name !== "") {
@@ -35,5 +36,7 @@ export class HomeComponent{
                 err => {
                 console.log(err);
               });    
+
+    */
   }
 }
